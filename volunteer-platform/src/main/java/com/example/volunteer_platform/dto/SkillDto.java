@@ -8,14 +8,25 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * DTO for the Skill entity, representing a skill that can be associated with a volunteer.
+ * Data Transfer Object (DTO) for Skill.
+ *
+ * This class is used to safely transfer skill-related data
+ * between the client layer and the backend without exposing
+ * the internal Skill entity directly.
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class SkillDto {
+
+    /**
+     * Name of the skill.
+     * 
+     * - Must not be blank
+     * - Maximum length is restricted to 100 characters
+     */
     @NotBlank
     @Size(max = 100, message = "Skill name cannot exceed 100 characters")
-    private String name; // Name of the skill
+    private String name;
 }
