@@ -56,7 +56,7 @@ public class SkillController {
     }
 
     /**
-     * Fetch a skill by name.
+     * Fetch a skill by name  .
      * If the skill does not exist, it is created automatically.
      */
     @GetMapping("/skills/name/{name}")
