@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 public class Volunteer extends User {
 
     @NotNull
-    @Enumerated(EnumType.STRING) // Persist the enum as a string in the database
+    @Enumerated(EnumType.STRING) // Persist the enum as a string in the database and add frontend valiation 
     @Column(nullable = false)
     private Gender gender; // Gender of the volunteer
 
